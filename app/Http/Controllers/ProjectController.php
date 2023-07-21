@@ -37,7 +37,7 @@ class ProjectController extends Controller
 
 
 
-         $imgPath = $request->projectImg->store('projectImgs');
+         $imgPath = $request->projectImg->store('public/projectImgs');
         Projects::create([
             'title' => $request->projectTitle,
             'description' => $request->projectDescription,
