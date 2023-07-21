@@ -3,12 +3,11 @@
 namespace App\Http\Controllers;
 
 
-use App\Models\projects;
+use App\Models\Projects;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Artisan;
 use Illuminate\Support\Facades\Storage;
 use Inertia\Inertia;
-use SebastianBergmann\CodeCoverage\Report\Xml\Project;
 
 class ProjectController extends Controller
 {
@@ -39,7 +38,7 @@ class ProjectController extends Controller
 
 
          $imgPath = $request->projectImg->store('projectImgs');
-        projects::create([
+        Projects::create([
             'title' => $request->projectTitle,
             'description' => $request->projectDescription,
             'img' =>  $imgPath,
@@ -71,7 +70,7 @@ class ProjectController extends Controller
     {
 
         return Inertia::render('Projects/Edit' ,[
-            'project'=> projects::all()->where('id', $id)->first(),
+            'project'=> Projects::all()->where('id', $id)->first(),
         ]);
 
     }
@@ -82,7 +81,7 @@ class ProjectController extends Controller
     public function update(Request $request, string $id)
     {
         //
-        $project = projects::find($id);
+        $project = Projects::find($id);
 
         $project->update([
             'title' => $request->projectTitle,
@@ -104,11 +103,11 @@ class ProjectController extends Controller
     public function destroy(string $id)
     {
         //
-        $projectImg = projects::find($id)->img;
+        $projectImg = Projects::find($id)->img;
         Storage::delete($projectImg);
 
 
-        projects::destroy($id);
+        Projects::destroy($id);
 
         return redirect('projects');
     }
