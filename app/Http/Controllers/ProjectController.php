@@ -40,7 +40,7 @@ class ProjectController extends Controller
 
       //$imgPath = Storage::disk('public')->put(Str::random(50).'.jpg', $request->file('projectImg'), 'public');
 
-         $imgPath = $request->projectImg->store('public/projectImgs');
+         $imgPath = $request->projectImg->store('projectImgs');
 
         Projects::create([
             'title' => $request->projectTitle,
