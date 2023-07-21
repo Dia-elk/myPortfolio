@@ -27,7 +27,7 @@
             <div class="flex flex-col  items-center" >
                 <h1 class=" px-4 text-neutral-100 text-2xl font-semibold tracking-wide" >{{ projectTitle }}</h1>
 
-                <p class="text-center text-xs  px-4 text-neutral-900 transition-all duration-300" :class="isHover? 'mt-4 ' : 'mt-16'" >
+                <p class="text-center text-xs  px-4 text-neutral-100 transition-all duration-300" :class="isHover? 'mt-4 ' : 'mt-16'" >
                  {{projectDescription}}
                    </p>
             </div>
