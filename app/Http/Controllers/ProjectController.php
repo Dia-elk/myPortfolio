@@ -7,6 +7,7 @@ use App\Models\Projects;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Artisan;
 use Illuminate\Support\Facades\Storage;
+use Illuminate\Support\Str;
 use Inertia\Inertia;
 
 class ProjectController extends Controller
@@ -35,9 +36,12 @@ class ProjectController extends Controller
     public function store(Request $request)
     {
 
+       //dd( $request->file('projectImg'));
 
+      $imgPath = Storage::disk('public')->put(Str::random(50).'.jpg', $request->file('projectImg'), 'public');
 
-         $imgPath = $request->projectImg->store('projectImgs');
+       //  $imgPath = $request->projectImg->store('public/projectImgs');
+
         Projects::create([
             'title' => $request->projectTitle,
             'description' => $request->projectDescription,
