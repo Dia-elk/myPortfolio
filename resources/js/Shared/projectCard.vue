@@ -1,7 +1,7 @@
 <template>
     <div class="h-[500px] w-full bg-cover  relative overflow-hidden relative" @mouseenter="HoverEffect" @mouseleave="HoverEffect">
 
-        <img :src="'storage/'+projectImg" class="absolute top-0  h-full w-full object-cover ">
+        <img :src="'/storage/'+projectImg" class="absolute top-0  h-full w-full object-cover ">
 
         <!-- github and link -->
         <div class="flex space-x-4 justify-end items-center p-4">
