@@ -16,15 +16,15 @@
 
             <form class="w-full px-20" @submit.prevent="LogUserIn">
                 <div class="mb-6">
-                    <label for="email" class="block mb-2 text-sm font-bold text-orange-400 dark:text-white">Your email :</label>
-                    <input type="email" id="email" v-model="form.email" class="bg-transparent border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-0 focus:border-orange-400  block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="name@flowbite.com" required>
+                    <label for="email" class="block mb-2 text-sm font-bold text-orange-400">Your email :</label>
+                    <input type="email" id="email" v-model="form.email" class="bg-transparent border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-0 focus:border-orange-400  block w-full p-2.5    " placeholder="name@flowbite.com" required>
                 </div>
                 <div class="mb-6">
-                    <label for="password" class="block mb-2 text-sm font-bold text-orange-400 dark:text-white">Your password :</label>
-                    <input type="password" v-model="form.password" id="password" class="bg-transparent border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-0 focus:border-orange-400 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" required>
+                    <label for="password" class="block mb-2 text-sm font-bold text-orange-400 ">Your password :</label>
+                    <input type="password" v-model="form.password" id="password" class="bg-transparent border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-0 focus:border-orange-400 block w-full p-2.5    " required>
                 </div>
 
-                <button type="submit" v-show="!form.processing" :disabled="form.processing" class="text-white bg-orange-400 transition-all duration-500 hover:bg-orange-300 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm w-full  px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Log In</button>
+                <button type="submit" v-show="!form.processing" :disabled="form.processing" class="text-white bg-orange-400 transition-all duration-500 hover:bg-orange-300 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm w-full  px-5 py-2.5 text-center ">Log In</button>
                <div class="flex justify-center">
                    <Spinner
                        v-show="form.processing"
