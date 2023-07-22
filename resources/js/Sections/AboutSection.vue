@@ -7,7 +7,6 @@
                 The Architect of Bytes: <br>
                 Unveiling the Mind Behind the Code
             </h1>
-
             <p class="md:max-w-[600px] px-4 md:text-sm text-neutral-400 text-xs font-normal leading-loose tracking-wide mt-5 ">
                 Welcome to my digital realm! I am <span class="text-orange-400 text-sm font-bold leading-loose tracking-wide">$name</span> ,
                 a creator of captivating digital experiences. With expertise in <span class="text-orange-400 text-sm font-bold leading-loose tracking-wide">$skills[0]</span> ,
@@ -15,7 +14,6 @@
                 mobile apps and web solutions. Join me on a journey of innovation and
                 let's bring your ideas to life in a realm where creativity knows no bounds.
             </p>
-
             <div class="mt-10 flex flex-col sm:flex-row gap-4 items-center">
 
                <a href="/Contact" >
