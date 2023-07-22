@@ -1,7 +1,7 @@
 <template>
     <div class="flex flex-col px-4">
         <!-- title  -->
-        <h1 class="text-neutral-800 text-xl sm:text-2xl font-bold tracking-wide">
+        <h1 class="text-neutral-800 text-xl sm:text-2xl mt-16 sm:mt-0 font-bold tracking-wide">
             Unlocking Web/Mobile Magic:  <br>
             Empowering Your Online Presence
         </h1>
