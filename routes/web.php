@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\ContactController;
 use App\Http\Controllers\ContactMeController;
 use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\ProfileController;
@@ -45,7 +46,7 @@ Route::get('/Contact', function () {
 });
 
 
-
+Route::resource('contact',ContactController::class);
 
 Route::middleware('auth')->group(function (){
     Route::resource('dashboard',DashboardController::class);

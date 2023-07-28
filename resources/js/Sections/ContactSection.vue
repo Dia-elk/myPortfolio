@@ -9,7 +9,7 @@
 
         <div class="flex justify-center items-center ">
 
-            <form class="flex gap-4 flex-col mt-16  sm:mt-40 sm:px-6 px-4 sm:w-[600px] " @submit.prevent =" form.post(route('contactMe.store'), {
+            <form class="flex gap-4 flex-col mt-16  sm:mt-40 sm:px-6 px-4 sm:w-[600px] " @submit.prevent =" form.post(route('contact.store'), {
                 onSuccess: onSubmitSuccess,
                 preserveScroll : true,
                 })

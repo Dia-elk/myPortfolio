@@ -4,20 +4,15 @@ namespace App\Http\Controllers;
 
 use App\Models\ContactsMe;
 use Illuminate\Http\Request;
-use Inertia\Inertia;
 
-class ContactMeController extends Controller
+class ContactController extends Controller
 {
     /**
      * Display a listing of the resource.
      */
     public function index()
     {
-
-        return Inertia::render('ContactMe/Index' , [
-            'messages' => ContactsMe::orderByDesc('created_at')->get()
-        ]);
-
+        //
     }
 
     /**
@@ -33,7 +28,17 @@ class ContactMeController extends Controller
      */
     public function store(Request $request)
     {
+        $validatedData = $request->validate([
+            'email' => 'required|email',
+        ]);
 
+        ContactsMe::create([
+            'name' => $request->name,
+            'email' => $validatedData['email'],
+            'typeOfProject' => $request->typeOfProject,
+            'budget' => $request->budget,
+            'details' => $request->details,
+        ]);
     }
 
     /**
@@ -50,7 +55,6 @@ class ContactMeController extends Controller
     public function edit(string $id)
     {
         //
-
     }
 
     /**

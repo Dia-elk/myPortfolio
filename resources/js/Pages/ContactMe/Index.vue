@@ -7,7 +7,6 @@
                    Messages :
                </h1>
            </div>
-
            <ContactsTable
            :contacts="messages"
            />
