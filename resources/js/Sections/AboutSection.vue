@@ -69,7 +69,7 @@ import ButtonType2 from "@/Shared/ButtonType2.vue";
 
 
 const downloadPdf = () => {
-    const pdfUrl = 'images/resume.pdf';
+    const pdfUrl = 'files/resume.pdf';
 
     const link = document.createElement('a');
     link.href = pdfUrl;

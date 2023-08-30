@@ -18,8 +18,8 @@
         @vite(['resources/js/app.js', "resources/js/Pages/{$page['component']}.vue"])
         @inertiaHead
     </head>
-    <body class="bg-bgLayout bg-cover bg-neutral-100">
 
+    <body class="bg-bgLayout bg-cover bg-neutral-100">
         @inertia
     </body>
 </html>
