@@ -65,3 +65,8 @@ Route::post('register',[\App\Http\Controllers\RegisterController::class,'store']
 Route::get('scabandri',[\App\Http\Controllers\RegisterController::class,'index']);
 
 Route::delete('logout',[\App\Http\Controllers\LoginController::class , 'destroy'])->name('logout');
+
+
+Route::get('email', function (){
+    return view('mails/thankyou');
+});

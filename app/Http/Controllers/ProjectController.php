@@ -36,7 +36,7 @@ class ProjectController extends Controller
     public function store(Request $request)
     {
 
-       //dd( $request->file('projectImg'));
+      // dd( $request->projectImg.typeOf());
 
       //$imgPath = Storage::disk('public')->put(Str::random(50).'.jpg', $request->file('projectImg'), 'public');
 

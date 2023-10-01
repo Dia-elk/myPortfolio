@@ -2,8 +2,10 @@
 
 namespace App\Http\Controllers;
 
+use App\Mail\ThankYouMail;
 use App\Models\ContactsMe;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Mail;
 
 class ContactController extends Controller
 {
@@ -32,13 +34,15 @@ class ContactController extends Controller
             'email' => 'required|email',
         ]);
 
-        ContactsMe::create([
+        $message = ContactsMe::create([
             'name' => $request->name,
             'email' => $validatedData['email'],
             'typeOfProject' => $request->typeOfProject,
             'budget' => $request->budget,
             'details' => $request->details,
         ]);
+        Mail::to( $validatedData['email'])->send(new ThankYouMail($message));
+
     }
 
     /**

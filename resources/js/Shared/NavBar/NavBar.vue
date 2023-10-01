@@ -56,7 +56,7 @@
 
     <!-- Drawer -->
     <div @click="OpenDrawer"
-         class="sm:hidden w-full h-screen bg-black bg-opacity-50 fixed z-10 fixed top-0  duration-700 transition-all"
+         class="sm:hidden w-full h-screen bg-black bg-opacity-50  z-10 fixed top-0  duration-700 transition-all"
          :class="{'right-0':isOpen} , {'right-[-640px]':!isOpen}">
         <div class="h-screen w-[300px] top-0 fixed duration-1000 transition-all bg-white z-40"
              :class="{'left-0':isOpen} , {'left-[-300px]':!isOpen}">
@@ -65,7 +65,7 @@
 
                 <nav class="flex flex-col space-y-10 items-center">
                     <NavItem href="/" :active="$page.component==='Home'"> Epicenter</NavItem>
-                    <NavItem href="/Works" :active="$page.component==='Works'" v-show="$page.props.projects.length">My
+                    <NavItem href="/Works" :active="$page.component==='Works'" v-if="$page.props.projects.length">My
                         Masterpieces
                     </NavItem>
                     <NavItem href="/Services" :active="$page.component==='Services'">Magical Offerings</NavItem>
