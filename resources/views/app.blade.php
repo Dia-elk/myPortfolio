@@ -11,7 +11,7 @@
         <link href="https://fonts.bunny.net/css?family=figtree:400,500,600&display=swap" rel="stylesheet" />
 
         <link rel="shortcut icon" type="image/jpg" href="images/favicon.png"/>
-
+        <meta name="google-site-verification" content="DzP2i-arcWQ74Be-AaoAS0h4ic1xwU6xWZSj_jh5OKQ" />
 
         <!-- Scripts -->
         @routes
