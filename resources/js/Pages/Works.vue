@@ -1,6 +1,9 @@
 <template>
     <div>
-        <Head title="My Masterpieces"/>
+        <Head>
+            <title>Works of Dia El keantaoui</title>
+            <meta name="description" content="Browse through the impressive portfolio of Dia El keantaoui, showcasing a diverse range of web and mobile development projects. Experience firsthand the creativity, efficiency, and expertise brought to life in each Laravel, Vue.js, and Flutter creation." />
+        </Head>
         <main-layout>
             <Hero>
                 My Masterpieces

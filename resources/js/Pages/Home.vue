@@ -10,25 +10,6 @@ import ContactSection from "@/Sections/ContactSection.vue";
 import {ref} from "vue";
 
 
-let title = ref('Welcome');
-
-function homeTitle(){
-    title.value = 'Welcome';
-}
-function aboutTitle(){
-    title.value = 'About';
-}
-function workTitle(){
-    title.value = 'Works';
-}
-
-function serviceTitle(){
-    title.value = 'Services';
-}
-
-function contactTitle(){
-    title.value = 'Say Hi!';
-}
 
 defineProps({
     projects : Array
@@ -37,15 +18,16 @@ defineProps({
 
 <template>
     <Head>
-        <title>{{title}}</title>
+        <title>Dia El keantaoui</title>
+        <meta name="description" content="Welcome to the portfolio of Dia El keantaoui, a fullstack developer proficient in Laravel, Vue.js, and Flutter. Explore my skills, projects, and learn more about my journey in the world of web and mobile development." />
     </Head>
   <div>
     <main-layout>
-        <HomeSection @mouseenter="homeTitle"/>
-        <AboutSection @mouseenter="aboutTitle"/>
-        <WorkSection @mouseenter="workTitle" :projects="projects"/>
-        <ServiceSection @mouseenter="serviceTitle"/>
-        <ContactSection @mouseenter="contactTitle"/>
+        <HomeSection/>
+        <AboutSection/>
+        <WorkSection :projects="projects"/>
+        <ServiceSectio/>
+        <ContactSection/>
     </main-layout>
   </div>
 </template>
