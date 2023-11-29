@@ -12,7 +12,15 @@
 
         <link rel="shortcut icon" type="image/jpg" href="images/favicon.png"/>
         <meta name="google-site-verification" content="DzP2i-arcWQ74Be-AaoAS0h4ic1xwU6xWZSj_jh5OKQ" />
+        <!-- Google tag (gtag.js) -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-0MK9PSE6HZ"></script>
+        <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
 
+            gtag('config', 'G-0MK9PSE6HZ');
+        </script>
         <!-- Scripts -->
         @routes
         @vite(['resources/js/app.js', "resources/js/Pages/{$page['component']}.vue"])
