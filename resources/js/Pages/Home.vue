@@ -26,7 +26,7 @@ defineProps({
         <HomeSection/>
         <AboutSection/>
         <WorkSection :projects="projects"/>
-        <ServiceSectio/>
+        <ServiceSection/>
         <ContactSection/>
     </main-layout>
   </div>
