@@ -21,33 +21,6 @@ use Inertia\Inertia;
 |
 */
 
-Route::get('/', function () {
-    return Inertia::render('Home' , [
-        'projects' => Projects::all()
-    ]);
-});
-
-Route::get('/Works', function () {
-    return Inertia::render('Works');
-});
-
-
-
-Route::get('/Services', function () {
-    return Inertia::render('Services');
-});
-
-Route::get('/About', function () {
-    return Inertia::render('About');
-});
-
-Route::get('/Contact', function () {
-    return Inertia::render('Contact');
-});
-
-
-Route::resource('contact',ContactController::class);
-
 Route::middleware('auth')->group(function (){
     Route::resource('dashboard',DashboardController::class);
     Route::resource('projects',ProjectController::class);
@@ -67,6 +40,3 @@ Route::get('scabandri',[\App\Http\Controllers\RegisterController::class,'index']
 Route::delete('logout',[\App\Http\Controllers\LoginController::class , 'destroy'])->name('logout');
 
 
-Route::get('email', function (){
-    return view('mails/thankyou');
-});
