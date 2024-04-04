@@ -35,7 +35,7 @@ class NewContactNotification extends Notification
     public function toSlack(object $notifiable): SlackMessage
     {
         return (new SlackMessage)
-            ->text('New message from' . $this->email);
+            ->text('New message from: '. $this->email);
     }
 
     /**
