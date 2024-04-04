@@ -17,10 +17,10 @@ class ThankYouMail extends Mailable implements ShouldQueue
     /**
      * Create a new message instance.
      */
-    private $message;
-    public function __construct(ContactsMe $message)
+
+    public function __construct(private ContactsMe $message)
     {
-        $this->message = $message;
+
     }
 
     /**
@@ -45,8 +45,6 @@ class ThankYouMail extends Mailable implements ShouldQueue
             with: [
                 'name' => $this->message->name,
                 'project' => $this->message->typeOfProjects,
-
-
             ]
         );
     }
