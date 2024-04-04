@@ -25,7 +25,8 @@ class ContactController extends Controller
             'details' => $request->details,
         ]);
        // Mail::to( $validatedData['email'])->send(new ThankYouMail($message));
-        Notification::route('mail',$validatedData['email'])->route('slack',config('services.slack.contact'))->notify(new NewContactNotification($message,$validatedData['email']));
+
+        Notification::route('mail',$validatedData['email'])->route('slack', config('services.slack.contact'))->notify(new NewContactNotification($message,$validatedData['email']));
 
     }
 

@@ -6,10 +6,11 @@ use App\Models\ContactsMe;
 use Illuminate\Bus\Queueable;
 use Illuminate\Contracts\Queue\ShouldQueue;
 use Illuminate\Notifications\Messages\MailMessage;
+use Illuminate\Notifications\Messages\SlackMessage;
 use Illuminate\Notifications\Notification;
-use Illuminate\Notifications\Slack\SlackMessage;
 
-class NewContactNotification extends Notification
+
+class NewContactNotification extends Notification implements ShouldQueue
 {
     use Queueable;
 
@@ -35,7 +36,7 @@ class NewContactNotification extends Notification
     public function toSlack(object $notifiable): SlackMessage
     {
         return (new SlackMessage)
-            ->text('New message from: '. $this->email);
+            ->content('New message from: '. $this->email);
     }
 
     /**
@@ -44,11 +45,11 @@ class NewContactNotification extends Notification
     public function toMail(object $notifiable): MailMessage
     {
         return (new MailMessage)
-            ->view('mails.thankyou')
-            ->with([
+            ->view('mails.thankyou',[
                 'name' => $this->message->name,
                 'project' => $this->message->typeOfProjects,
             ]);
+
     }
 
     /**
