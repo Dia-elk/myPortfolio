@@ -36,7 +36,7 @@ class NewContactNotification extends Notification implements ShouldQueue
     public function toSlack(object $notifiable): SlackMessage
     {
         return (new SlackMessage)
-            ->content('New message from: '. $this->email . 'Name: ' . $this->message->name . '. Message is : ' . $this->message->details . '. Type of Project: ' . $this->message->typeOfProject . 'Budget: ' . $this->message->budget);
+            ->content('New message from: '. $this->email . '. Name: ' . $this->message->name . '. Message is : ' . $this->message->details . '. Type of Project: ' . $this->message->typeOfProject . 'Budget: ' . $this->message->budget);
     }
 
     /**
